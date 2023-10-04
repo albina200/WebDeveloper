@@ -493,6 +493,8 @@ section {
 }
 
 form {
+    position: relative;
+
     width: 400px;
     padding: 30px;
 
@@ -541,6 +543,47 @@ form button {
     width: 100%;
     padding: 18px 10px;
     background-color: var(--ColorWhite);
+}
+
+form p {
+    font-size: 15px;
+    line-height: 15px;
+    width: 100%;
+    text-align: center;
+    color: var(--ColorTransparentBlack);
+}
+
+iframe {
+    display: none;
+}
+
+.wrapper {
+    position: absolute;
+    left: -15px;
+    top: 30px;
+    width: 430px;
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    background-color: var(--ColorBlack);
+    color: var(--ColorWhite);
+    border: 1px solid var(--ColorBlack);
+    box-shadow: 0px 0px 0px 5px var(--ColorTransparentBlack);
+
+    font-size: 21px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+._active {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .social {

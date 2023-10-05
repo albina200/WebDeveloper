@@ -2,10 +2,9 @@ let hamburger = document.querySelector(".hamburger");
 let NavLinks = document.querySelector(".nav__links");
 let NavAllLinks = document.querySelectorAll("nav a");
 
-// Получаем ссылки на кнопки и тексты
-let showTextButtons = document.querySelectorAll('.showTextButton');
-let hiddenTexts = document.querySelectorAll('.hiddenText');
-
+let form = document.querySelector("form");
+let iframe = document.querySelector("iframe");
+let wrapper = document.querySelector(".wrapper");
 
 
 hamburger.onclick = function () {
@@ -20,22 +19,10 @@ for (let i = 0; i < 5; i++) {
     }
 }
 
-
-
-// Добавляем обработчик события при нажатии на каждую кнопку
-showTextButtons.forEach(function(button, index) {
-    button.addEventListener('click', function() {
-      // Если текущий текст виден, скрываем его
-      if (hiddenTexts[index].style.display === 'block') {
-        hiddenTexts[index].style.display = 'none'; // Скрываем текст
-      } else {
-        // Закрываем все тексты перед открытием текущего
-        hiddenTexts.forEach(function(text) {
-          text.style.display = 'none';
-        });
-  
-        // Показываем текущий текст
-        hiddenTexts[index].style.display = 'block';
-      }
-    });
-  });
+iframe.onload = function () {
+  wrapper.classList.add("_active");
+  setTimeout(() => {
+      form.reset();
+      wrapper.classList.remove("_active");
+  }, 2000);
+}

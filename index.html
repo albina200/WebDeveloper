@@ -226,17 +226,22 @@
                 <h2>Свяжитесь с нами</h2>
                 <div class="contacts__elements">
 
-                    <form action="">
+                    <form target="formsubmit" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfrvAdVCQn4TkfeGrdMSeO2RMxokpbiEhq4UspUuA_FDTOCJg/formResponse">
+                        
+                        <iframe name="formsubmit" src="" frameborder="0"></iframe>
+                        <div class="wrapper">Ваша заявка отправлена</div>
+
                         <div class="form__info">
                             <label for="name">Имя</label>
-                            <input id="name" type="text" placeholder="Как к Вам обращаться">
+                            <input required id="name" type="text" placeholder="Как к Вам обращаться" name="entry.845334367">
                         </div>
 
                         <div class="form__info">
                             <label for="tel">Телефон</label>
-                            <input id="tel" type="tel" placeholder="Введите ваш телефон">
+                            <input required id="tel" type="tel" placeholder="Введите ваш телефон" name="entry.10440494">
                         </div>
-                        <button>Отправить</button>
+                        <button type="submit">Отправить</button>
+                        <p>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.</p>
                     </form>
 
                     <div class="social">
